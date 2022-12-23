@@ -2,9 +2,8 @@ import React from 'react';
 
 const TableSection = () => {
     return (
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto px-16">
             <table class="table w-full">
-
                 <thead>
                     <tr>
                         <th></th>

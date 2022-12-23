@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -7,7 +7,7 @@ const Navbar = () => {
         //     <a className="btn btn-ghost normal-case text-white text-xl ">Expense Tracker</a>
         //     <a className='btn btn-ghost normal-case text-white text-xl'>Login</a>
         // </div>
-        <div className="navbar bg-purple-700 text-white">
+        <div className="navbar bg-purple-700 text-white px-14">
             <div className="navbar-start">
 
                 <Link className="btn btn-ghost mr-10" to="/">Expense Tracker</Link>

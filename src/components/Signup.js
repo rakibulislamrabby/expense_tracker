@@ -1,14 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Login = () => {
+const Signup = () => {
+    const onSubmit = async data => {
+        console.log('update one');
+        console.log();
+    }
     return (
-        <div className='flex h-screen justify-center items-center mb-28'>
+        <div className='flex h-screen justify-center items-center pt-10 mb-20'>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
-                    <h2 className="text-center text-2xl font-bold ">Login</h2>
+                    <h2 className="text-center text-2xl font-bold ">Sign Up</h2>
                     <form>
+                        {/* email with validation */}
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Name</span>
+                            </label>
+                            <input
 
+                                type="name" placeholder="You Name"
+                                className="input input-bordered input-secondary w-full max-w-xs" />
+                            <label className="label">
+
+                            </label>
+                        </div>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -19,9 +35,10 @@ const Login = () => {
                                 className="input input-bordered input-secondary w-full max-w-xs" />
                             <label className="label">
 
+
                             </label>
                         </div>
-
+                        {/* password with validation */}
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Password</span>
@@ -30,19 +47,19 @@ const Login = () => {
 
                                 type="password" placeholder="You Password"
                                 className="input input-bordered input-secondary w-full max-w-xs" />
+                            <label className="label">
 
+                            </label>
                         </div>
 
-                        {/* <p className='pb-6'>Forgate Password? <button onClick={resetPassword} className='text-secondary'>Reset password</button></p> */}
-                        <input className='btn w-full  max-w-xs btn-secondary text-white mt-8' type="submit" value="Login" />
+                        <input className='btn w-full btn-primary  max-w-xs text-white' type="submit" value="Sign Up" />
                     </form>
-                    <p>New to Expense Tracker? <Link className='text-secondary' to={"/signup"}>Create new account</Link></p>
-                    {/* <div className="divider">OR</div> */}
-                    {/* <button onClick={() => signInWithGoogle()} className="btn btn-outline btn-primary">CONTINUE WITH GOOGLE</button> */}
+                    <p>Already have account? <Link className='text-secondary' to={"/login"}>Please Login</Link></p>
+
                 </div>
             </div>
         </div>
     );
 };
 
-export default Login;
+export default Signup;

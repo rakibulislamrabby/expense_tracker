@@ -8,10 +8,9 @@ const InputSection = () => {
     const [endDate, setEndDate] = useState(null);
 
     return (
-        <div className='grid grid-cols-2 gap-4 m-6'>
+        <div className='grid grid-cols-2 gap-4 m-6 mx-14'>
 
             <div className='grid grid-cols-2'>
-
                 <input type="text" placeholder="Expense Title" class="input input-bordered input-secondary w-4/5 max-w-xs mr-8" />
                 <input type="number" placeholder="Amount" class="input input-bordered input-secondary w-4/5 max-w-xs" />
 
@@ -31,9 +30,13 @@ const InputSection = () => {
                 </div>
 
                 <button class="btn btn-secondary btn-wide w-4/5  mt-4">Enter</button>
+                {/* <div class="divider lg:divider-horizontal">OR</div> */}
             </div>
+
+
             <div className='grid grid-cols-2'>
-                {/* <input type="text" placeholder="Start Date" class="input input-bordered input-secondary w-2/5 max-w-xs" /> */}
+
+
                 <DatePicker placeholderText='Start Date' className='input input-bordered input-secondary w-4/5 max-w-x' selected={startDate} onChange={date => setstartDate(date)} />
 
                 <select class="select select-secondary w-4/5 max-w-xs ">
